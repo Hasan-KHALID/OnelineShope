@@ -1,53 +1,54 @@
 <div class="container">
 
-    <div class="row">
+    <div class="row pt-4">
         <div class="col-2">
-            category
-        </div>
+            <!-- category -->
+                <div ngbDropdown class="d-inline-block">
+                    <button type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+                        Product Category
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem>Mobile</button>
+                        <button ngbDropdownItem>Laptop</button>
+                        <button ngbDropdownItem>Camera</button>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+
+            </div>
 
         <div class="col-10">
-            <div class="card-group">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class=" card col card border-success bg-light m-2" style="width:400px"
+                    *ngFor=" let item of product.products; let i = index">
+            
+                    <div class="btn" type="button" (click)="currentProduct = i">
+                        <img class="card-img" style="width:130px; height: 130px;" [src]='item.imgPath' alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.modal}}</h5>
+                            <p class="card-text">
+                                <!-- {{item.product}} -->
+                            </p>
+                            <p>Available <Span>{{item.amount}}</Span> </p>
+            
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Pirce: <span>{{item.price | currency}}</span></small>
+                        </div>
                     </div>
+            
                 </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                            content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
+            
             </div>
-            </div>
-
 
         </div>
 
     </div>
+
+
+    <app-selected-product [currentProduct]="currentProduct" ></app-selected-product>
 
     

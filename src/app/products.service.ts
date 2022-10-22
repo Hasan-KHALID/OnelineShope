@@ -7,6 +7,7 @@ export class ProductsService {
   products=[
     {
       modal: '13',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20210927_1632733268_719979.png',
       Id:'',
       product:[{type:'mobile',ram: 6,color:'black',storage:256}],
       brand:'apple',
@@ -15,6 +16,7 @@ export class ProductsService {
     },
     {
       modal: '13 pro',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220328_1648464644_936918.png',
       Id:'',
       product:[{type:'mobile',ram:4,color:'white',storage:512}],
       brand:'apple',
@@ -23,6 +25,7 @@ export class ProductsService {
     },
     {
       modal: '13 pro max',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220328_1648464562_431145.png',
       Id:'',
       product:[{type:'mobile',ram:4,color:'blue',storage:512}],
       brand:'apple',
@@ -31,7 +34,8 @@ export class ProductsService {
     },
     {
       modal: 'S 21',
-      Id:'',
+      imgPath:'',
+      Id:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220117_1642398692_412261.png',
       product:[{type:'mobile',ram:12,color:'red',storage:512}],
       brand:'samsung',
       amount:12,
@@ -39,6 +43,7 @@ export class ProductsService {
     },
     {
       modal: 'S 21 ultra',
+      imgPath:'',
       Id:'',
       product:[{type:'mobile',ram:8,color:'green',storage:256}],
       brand:'samsung',
@@ -47,6 +52,7 @@ export class ProductsService {
     },
     {
       modal: 'S 21 FE',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220420_1650444296_941710.png',
       Id:'',
       product:[{type:'mobile',ram:12,color:'blue',storage:512}],
       brand:'samsung',
@@ -55,6 +61,7 @@ export class ProductsService {
     },
     {
       modal: 'macBook air',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20221001_1664602208_517055.jpeg',
       Id:'',
       product:[{type:'laptop',ram:8,color:'black',storage:1000}],
       brand:'apple',
@@ -63,6 +70,7 @@ export class ProductsService {
     },
     {
       modal: 'macBook pro',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220716_1657947909_290141.jpeg',
       Id:'',
       product:[{type:'laptop',ram:16,color:'golden',storage:512}],
       brand:'apple',
@@ -70,36 +78,40 @@ export class ProductsService {
       price:30
     },
     {
-      modal: 'vivobook',
+      modal: 'playstation5',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220112_1641985872_469486.jpeg',
       Id:'',
-      product:[{type:'laptop',ram:16,color:'black',storage:1000}],
-      brand:'asus',
+      product:[{type:'console',ram:16,color:'black',storage:1000}],
+      brand:'sony',
       amount:31,
-      price:1399
+      price:499
     },
     {
-      modal: 'vivobook pro',
+      modal: 'gamepad',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220113_1642052594_412206.jpeg',
       Id:'',
-      product:[{type:'laptop',ram:12,color:'blue',storage:1000}],
-      brand:'asus',
+      product:[{type:'accessories',ram:'',color:'blue',storage:''}],
+      brand:'sony',
       amount:1999,
       price:34
     },
     {
-      modal: 'D 600',
+      modal: 'insta360',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220611_1654928486_641202.jpeg',
       Id:'',
-      product:[{type:'camera',ram:'',color:'black',storage:''}],
-      brand:'canon',
+      product:[{type:'camera',ram:'',color:'white',storage:''}],
+      brand:'insta',
       amount:12,
-      price:966
+      price:266
     },
     {
-      modal: 'D 700',
+      modal: 'dji action 2',
+      imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20211202_1638427073_887338.png',
       Id:'',
       product:[{type:'camera',ram:'',color:'clack',storage:''}],
-      brand:'canon',
+      brand:'dji',
       amount:34,
-      price:309
+      price:109
     }
 
 
