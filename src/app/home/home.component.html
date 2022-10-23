@@ -1,3 +1,16 @@
-<img src="https://static.gadgetandgear.com/tmp/slider/20221015_1665825281_979283.png" alt="">
+<!-- <img src="https://static.gadgetandgear.com/tmp/slider/20221015_1665825281_979283.png" alt=""> -->
+
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" />
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide" />
+        </div>
+    </ng-template>
+</ngb-carousel>
 
 <app-product-list></app-product-list>

@@ -1,8 +1,10 @@
 <div class="container pt-4 ">
+    <h1>{{id}}</h1>
 
     <div class="position-sticky">
 
         <h1>{{currentItem.modal}}</h1>
+        
         <div class="row card">
             <div class="col-lg-6">
                 <img class="card-img-top" style="width:350px; height: 350px;" [src]="currentItem.imgPath" alt="image">
@@ -18,8 +20,9 @@
             <a type="button"class="btn btn-primary m-2">-</a>
     
             <a type="button" class="btn btn-secondary m-2" >+</a>
-            <a>Selected <span>{{currentItem.name}}</span>:  </a>
-            <button class="btn btn-primary m-2" >Add to cart</button>        </div>
+            <a>Selected </a>
+            <button class="btn btn-primary m-2" >Add to cart</button>    
+        </div>
 
 
     </div>

@@ -9,6 +9,8 @@ import { SelectedProductComponent } from './selected-product/selected-product.co
 import { HomeComponent } from './home/home.component';
 import { LocationComponent } from './location/location.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProductListComponent,
     SelectedProductComponent,
     HomeComponent,
-    LocationComponent
+    LocationComponent,
+    NotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

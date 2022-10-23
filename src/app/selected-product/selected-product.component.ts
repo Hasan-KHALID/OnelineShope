@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -8,16 +9,28 @@ import { ProductsService } from '../products.service';
 })
 export class SelectedProductComponent implements OnInit {
 
-  @Input() currentProduct: number = 0;
-  currentItem:any;
+  id = 0
 
-  constructor( public product: ProductsService) { }
+  // currentProduct: number = 0;
+    currentItem:any;
 
-  ngOnInit(): void {
+  constructor( public product: ProductsService, public route: ActivatedRoute) {
+    //  console.log(this.product.currentProduct)
+   }
+
+  ngOnInit() {
+    // this.id = this.route.snapshot.params['id']
+    // console.log(this.product.currentProduct)
+    this.route.params.subscribe((params: Params) =>{
+      this.id =params['id']
+    })
+    this.currentItem = this.product.products[this.id]
+    
   }
-  ngOnChanges(){
-    this.currentItem = this.product.products[this.currentProduct]
+  
     // this.route.navigate(['item'])
-  }
+
+
+  
 
 }
