@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { CartServiceService } from '../cart-service.service';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -14,7 +15,10 @@ export class SelectedProductComponent implements OnInit {
   // currentProduct: number = 0;
     currentItem:any;
 
-  constructor( public product: ProductsService, public route: ActivatedRoute) {
+  constructor( public product: ProductsService, 
+    public route: ActivatedRoute, 
+    public cart: CartServiceService, 
+    public router: Router) {
     //  console.log(this.product.currentProduct)
    }
 
@@ -29,6 +33,26 @@ export class SelectedProductComponent implements OnInit {
   }
   
     // this.route.navigate(['item'])
+
+    addCart(){
+      this.cart.addItem(
+        this.currentItem.modal,
+        this.currentItem.imgPath, 
+        this.currentItem.Id,
+        this.currentItem.product,
+        this.currentItem.brand,
+        this.currentItem.amount,
+        this.currentItem.price,
+        this.currentItem.ram,
+        this.currentItem.color,
+        this.currentItem.storage,
+        this.currentItem.type
+        );
+
+        this.router.navigate(['/cart'])
+
+
+    }
 
 
   

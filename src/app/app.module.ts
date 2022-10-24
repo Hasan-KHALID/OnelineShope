@@ -11,6 +11,8 @@ import { LocationComponent } from './location/location.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     LocationComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    CartComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

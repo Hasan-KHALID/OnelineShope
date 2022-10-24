@@ -1,11 +1,11 @@
-<div class="container pt-4 ">
+<!-- <div class="container pt-4 ">
     <h1>{{id}}</h1>
 
-    <div class="position-sticky">
+    <div class="row d-flex justify-content-center">
 
-        <h1>{{currentItem.modal}}</h1>
+        <h1> Product modal: {{currentItem.modal}}</h1>
         
-        <div class="row card">
+        <div class="row card" style="width: 400px;height:400px ">
             <div class="col-lg-6">
                 <img class="card-img-top" style="width:350px; height: 350px;" [src]="currentItem.imgPath" alt="image">
                 <h1>kj</h1>
@@ -27,5 +27,73 @@
 
     </div>
 
+</div> -->
+
+
+<!-- final -->
+
+<div class="container" >
+
+    <div class="card mb-3 m-3 ">
+        <div class="row g-0">
+            <div class="col-6">
+                <img class="card-img-top" style="width:350px; height: 350px;" [src]="currentItem.imgPath" alt="image"
+                    class="img-fluid rounded-start" />
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h3 class="card-title"> Product modal: {{currentItem.modal}}</h3>
+                    <h2 class="card-title">Price: {{currentItem.price | currency}}</h2>
+                    <p class="card-text">
+                        This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted">Up to 18 months EMI Available</small>
+                    </p>
+                    <p class="card-text" >
+                        AMEX, EBL, Standard Chartered, Dhaka Bank, DBBL, Bank Asia, Southeast Bank, NRB, MTB, Trust Bank, Jamuna Bank, Standard
+                        Bank, UCB, Dhaka Bank.
+                    </p>
+                    <p class="card-text">
+                        <small class="text-muted">No return is applicable if the seal is broken.
+</small>
+                    </p>
+
+                   
+                </div>
+                <button class="btn btn-primary m-3" (click)="addCart()" >Add to cart</button>
+                <button class="btn btn-warning m-3">Bye now</button>
+            </div>
+        </div>
+    </div>
+<!-- 
+    <div>
+        <p>Similar Products</p>
+<div >
+<div class="row">
+    <div class="col-xl-4 col-lg-6 mb-4" *ngFor="let item of product.products">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
+                        class="rounded-circle" />
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">John Doe</p>
+                        <p class="text-muted mb-0">john.doe@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+</div>
+       
+        
+    </div> -->
+     
+</div>
+
+
 
