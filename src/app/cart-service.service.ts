@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class CartServiceService {
 
+  addCart:number=0
+
   myCart =[{modal:'',
       imgPath:'',
       Id:0,
@@ -47,6 +49,8 @@ export class CartServiceService {
       storage:Storage,
       type:Type
     })
+
+    this.addCart++
     
 
   }
@@ -63,7 +67,16 @@ export class CartServiceService {
       color:'',
       storage:'',
       type:''}]
+
+      this.addCart=0
      
   }
+
+  removeSingleItem(){
+    this.myCart.pop()
+    this.addCart--
+  }
+
+
 
 }

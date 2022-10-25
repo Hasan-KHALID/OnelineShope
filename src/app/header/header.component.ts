@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartServiceService } from '../cart-service.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>()
   
 
-  constructor(public router:Router) { }
+  constructor(public router:Router, public myCart: CartServiceService) { }
 
   ngOnInit(): void {
   }

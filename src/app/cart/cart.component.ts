@@ -8,8 +8,7 @@ import { CartServiceService } from '../cart-service.service';
 })
 export class CartComponent implements OnInit {
 
-  num!:number;
-  Subtotal=0
+  quantity:number = 1
   itemAmount=0
 
   constructor(public carts: CartServiceService) { }
@@ -17,11 +16,20 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addAmount(){
-    this.itemAmount = this.carts.myCart[this.num].amount++;
-    this.Subtotal =  this.carts.myCart[this.num].price * this.carts.myCart[this.num].amount;
-    
+
+  remove(){
+    this.carts.removeSingleItem()
+
   }
+
+  addQuantity(){
+    this.quantity++
+  }
+  
+  removeQuantity(){
+    this.quantity--
+  }
+
 
   // removeAmount(){
   //   this.amount--;

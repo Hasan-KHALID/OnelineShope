@@ -9,7 +9,7 @@ export class ProductsService  {
   currentProduct: number = 1
   products=[
     {
-      modal: '13',
+      modal: 'Iphone 13',
       imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20210927_1632733268_719979.png',
       Id: this.guid(),
       product:'mobile',
@@ -22,7 +22,7 @@ export class ProductsService  {
       type: 'all-product'
     },
     {
-      modal: '13 pro',
+      modal: 'Iphone 13 pro',
       imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220328_1648464644_936918.png',
       Id:this.guid(),
       product:'mobile',
@@ -35,7 +35,7 @@ export class ProductsService  {
       type: 'all-product'
     },
     {
-      modal: '13 pro max',
+      modal: 'Iphone 13 pro max',
       imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220328_1648464562_431145.png',
       Id:this.guid(),
       product:'mobile',
@@ -48,7 +48,7 @@ export class ProductsService  {
       type: 'all-product'
     },
     {
-      modal: 'S 21',
+      modal: 'Samsung S 21',
       imgPath:this.guid(),
       Id:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220117_1642398692_412261.png',
       product:'mobile',
@@ -61,7 +61,7 @@ export class ProductsService  {
       type: 'all-product'
     },
     {
-      modal: 'S 21 ultra',
+      modal: 'Samsung S 21 ultra',
       imgPath:this.guid(),
       Id:'',
       product:'mobile',
@@ -75,7 +75,7 @@ export class ProductsService  {
       type: 'all-product'
     },
     {
-      modal: 'S 21 FE',
+      modal: 'Samsung S 21 FE',
       imgPath:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220420_1650444296_941710.png',
       Id:this.guid(),
       product:'mobile',

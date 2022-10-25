@@ -49,7 +49,7 @@ export class SelectedProductComponent implements OnInit {
         this.currentItem.type
         );
 
-        this.router.navigate(['/cart'])
+        // this.router.navigate(['/cart'])
 
 
     }

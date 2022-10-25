@@ -1,6 +1,9 @@
 <div class="container">
+    <h1 class="text-center m-3" *ngIf="carts.myCart.length==1">
+        No product selected
+    </h1>
 
-    <table class="table align-middle mb-0 bg-white">
+    <table class="table align-middle mb-0 bg-white " *ngIf="carts.myCart.length>1">
         <thead class="bg-light">
             <tr>
                 <th>Product</th>
@@ -26,15 +29,22 @@
                     </div>
                 </td>
                 <td *ngIf="i>0">
-                    <p class="btn btn-primary" (click)="addAmount();this.num=i ">+</p>
-                    <h1>{{this.itemAmount}}</h1>
-                    <p class="btn btn-primary" >-</p>
+                    <div>
+                        <a class="btn btn-secondary" (click)="addQuantity()">+</a>
+                        <span class="m-3">{{quantity}}</span>
+                        <a class="btn btn-secondary" (click)="removeQuantity()">-</a>
+                    </div>
+                    
                 </td>
                 <td *ngIf="i>0">
-                    <p>{{item.price}}</p>
+                    <p>{{item.price | currency}}</p>
                 </td>
                 <td *ngIf="i>0">
-                    <p>{{Subtotal}}</p>
+                    <p>{{item.price*quantity | currency }}</p>
+                </td>
+
+                <td *ngIf="i>0">
+                    <button class="btn btn-danger" (click)="remove()" >remove</button>
                 </td>
             </tr>
         </tbody>

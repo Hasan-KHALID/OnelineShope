@@ -15,7 +15,10 @@
         <a class="btn btn-outline-light bg-dark mx-1 text-light" type="button" 
         routerLink="/location" 
         routerLinkActive="text-light">LOCATION</a>
-        <a class="btn btn-light bg-dark mx-1 text-light" type="button" routerLink="/cart" >🛒</a>
+        <button class="btn btn-light bg-dark mx-1 text-light position-relative" type="button" routerLink="/cart" >
+            🛒
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" [ngClass]="{'visually-hidden': myCart.addCart===0}" >{{myCart.addCart}}</span>
+        </button>
 
 
 
