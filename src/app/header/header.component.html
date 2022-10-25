@@ -7,8 +7,11 @@
         <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
 
         <!-- <div class="input-group mb-3"> -->
-        <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-        <a class="btn btn-outline-dark bg-light text-black" type="button">search</a>
+        <input type="text" 
+        class="form-control" 
+        placeholder="Search" 
+        aria-label="Search" [(ngModel)]= "enteredSearchValue" (input)="onSearchTextChanged()">
+        <a class="btn btn-outline-dark bg-light text-black" type="button" routerLink="/product-list/{{this.enteredSearchValue}}" >search</a>
         <a class="btn btn-outline-light bg-dark mx-1 text-light" type="button" 
         routerLink="/location" 
         routerLinkActive="text-light">LOCATION</a>

@@ -22,34 +22,50 @@
 
         <div class="col-10">
             <h1>{{id}}</h1>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div *ngFor=" let item of product.products; let i = index" 
-                [routerLink]="['/selected-product', i]" >
 
-                    <div *ngIf="item.brand == id || item.type == id || item.product == id " 
-                    class=" card col card bg-light p-3" 
-                    style="width:200px; padding: top 5px; ;" type="button">
-                            <img class="card-img" style="width:130px; height: 130px;" [src]='item.imgPath'>
-                            <div class="card-body">
-                                <h5 class="card-title">{{item.modal}}</h5>
-                                <p class="card-text">
-                                    <!-- {{item.product}} -->
-                                </p>
-                                <p>Available <Span>{{item.amount}}</Span> </p>
+            <div >
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <ng-container *ngFor=" let item of product.products; let i = index" >
+
+                        <ng-container *ngIf="
+                                    item.brand == id || 
+                                    item.type == id || 
+                                    item.product == id || 
+                                    (item.modal ||item.brand) .toLowerCase().includes(id)" >
+                        <div class="col"  [routerLink]="['/selected-product', i]">
+                        
+                            <div class="card h-100"
+                                style="width:200px; padding: top 5px; ;" type="button">
+                                <img class="card-img" style="width:130px; height: 130px;" [src]='item.imgPath'>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.modal}}</h5>
+                                    <p class="card-text">
+                                        <!-- {{item.product}} -->
+                                    </p>
+                                    <p>Available <Span>{{item.amount}}</Span> </p>
+                        
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Pirce: <span>{{item.price | currency}}</span></small>
+                                </div>
+                        
                         
                             </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Pirce: <span>{{item.price | currency}}</span></small>
-                            </div>
                         
+                        
+                        
+                        </div>
 
-                    </div>
-            
+
+                        </ng-container>
+
+                    </ng-container>
                     
-            
+                
                 </div>
-            
             </div>
+            
 
         </div>
 
