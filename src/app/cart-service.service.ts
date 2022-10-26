@@ -17,7 +17,8 @@ export class CartServiceService {
       ram:'',
       color:'',
       storage:'',
-      type:''}]
+      type:'',
+      quantity:1}]
 
   constructor() { }
 
@@ -32,7 +33,8 @@ export class CartServiceService {
       Ram:string,
       Color:string,
       Storage:string,
-      Type:string
+      Type:string,
+      quantity:number
     ){
 
     this.myCart.push(
@@ -47,7 +49,8 @@ export class CartServiceService {
       ram:Ram, 
       color:Color,
       storage:Storage,
-      type:Type
+      type:Type,
+      quantity:quantity
     })
 
     this.addCart++
@@ -66,7 +69,8 @@ export class CartServiceService {
       ram:'',
       color:'',
       storage:'',
-      type:''}]
+      type:'',
+      quantity:0}]
 
       this.addCart=0
      

@@ -19,7 +19,8 @@ export class ProductsService  {
       ram:'6',
       color:'black',
       storage:'256',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'Iphone 13 pro',
@@ -27,12 +28,13 @@ export class ProductsService  {
       Id:this.guid(),
       product:'mobile',
       brand:'apple',
-      amount: 8,
+      amount: 1,
       price:1099,
       ram: '6',
       color:'black',
       storage:'512',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'Iphone 13 pro max',
@@ -40,12 +42,13 @@ export class ProductsService  {
       Id:this.guid(),
       product:'mobile',
       brand:'apple',
-      amount:3,
+      amount:1,
       price:1199,
       ram: '8',
       color:'black',
       storage:'512',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'Samsung S 21',
@@ -53,12 +56,13 @@ export class ProductsService  {
       Id:'https://static.gadgetandgear.com/image/250x250/fit/tmp/product/20220117_1642398692_412261.png',
       product:'mobile',
       brand:'samsung',
-      amount:12,
+      amount:1,
       price:999,
       ram: '8',
       color:'black',
       storage:'512',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'Samsung S 21 ultra',
@@ -66,13 +70,14 @@ export class ProductsService  {
       Id:'',
       product:'mobile',
       brand:'samsung',
-      amount:23,
+      amount:1,
       price:1199,
       ram:'8',
       color:'green',
       storage:'256',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'Samsung S 21 FE',
@@ -80,13 +85,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'mobile',
       brand:'samsung',
-      amount:599,
+      amount:1,
       price:30,
       ram:'12',
       color:'blue', 
       storage:'512',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'macBook air',
@@ -94,13 +100,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'laptop',
       brand:'apple',
-      amount:21,
+      amount:1,
       price:1099,
       ram:'8',
       color:'black',
       storage:'1000',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'macBook pro',
@@ -108,13 +115,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'laptop',
       brand:'apple',
-      amount:1999,
+      amount:1,
       price:30,
       ram:'16',
       color:'golden',
       storage:'512',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'playstation5',
@@ -122,13 +130,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'console',
       brand:'sony',
-      amount:31,
+      amount:1,
       price:499,
       ram:'16',
       color:'black',
       storage:'1000',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'gamepad',
@@ -136,12 +145,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'accessories',
       brand:'sony',
-      amount:1999,
+      amount:1,
       price:34,
       ram:'',
       color:'blue',
       storage:'',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
+      
     },
     {
       modal: 'insta360',
@@ -149,12 +160,13 @@ export class ProductsService  {
       Id:this.guid(),
       product:'camera',
       brand:'insta',
-      amount:12,
+      amount:1,
       price:266,
       ram:'',
       color:'white',
       storage:'',
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     },
     {
       modal: 'dji action 2',
@@ -162,13 +174,14 @@ export class ProductsService  {
       Id:this.guid(),
       product:'camera',
       brand:'dji',
-      amount:34,
+      amount:1,
       price:109,
       ram:'',
       color:'clack',
       storage:'',
 
-      type: 'all-product'
+      type: 'all-product',
+      quantity:1
     }
 
 

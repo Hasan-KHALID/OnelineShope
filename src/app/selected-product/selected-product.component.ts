@@ -46,7 +46,8 @@ export class SelectedProductComponent implements OnInit {
         this.currentItem.ram,
         this.currentItem.color,
         this.currentItem.storage,
-        this.currentItem.type
+        this.currentItem.type,
+        this.currentItem.quantity
         );
 
         // this.router.navigate(['/cart'])
