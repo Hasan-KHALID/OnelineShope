@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartServiceService } from '../cart-service.service';
+
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  order = false
+
+  constructor(public carts:CartServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  orderDone(){
+    this.order =true
+    this.carts.removeItem()
   }
 
 }

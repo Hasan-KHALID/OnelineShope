@@ -55,6 +55,27 @@ export class SelectedProductComponent implements OnInit {
 
     }
 
+    byeNow(){
+       this.cart.addItem(
+        this.currentItem.modal,
+        this.currentItem.imgPath, 
+        this.currentItem.Id,
+        this.currentItem.product,
+        this.currentItem.brand,
+        this.currentItem.amount,
+        this.currentItem.price,
+        this.currentItem.ram,
+        this.currentItem.color,
+        this.currentItem.storage,
+        this.currentItem.type,
+        this.currentItem.quantity
+        );
+
+        this.router.navigate(['/checkout'])
+
+
+    }
+
 
   
 
