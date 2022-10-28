@@ -19,7 +19,7 @@ const routes: Routes = [
   //   path: 'selected', component: SelectedProductComponent
   // },
   {
-    path: 'selected-product/:id', component: SelectedProductComponent
+    path: 'selected-product/:id/:Id', component: SelectedProductComponent
   },
   // {
   //   path:'apple', component: ProductListComponent
