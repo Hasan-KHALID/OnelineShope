@@ -1,7 +1,11 @@
 <div class="container">
-    <h1 class="text-center m-3" *ngIf="carts.myCart.length==1">
-        No product selected
-    </h1>
+    <div *ngIf="carts.myCart.length==1" >
+    <h1 class="text-center m-3">😟</h1>
+    <h2 class="text-center m-3">
+        No product selected !
+    </h2>
+    </div>
+    
 
     <table class="table align-middle mb-0 bg-white m-3 " *ngIf="carts.myCart.length>1">
         <thead class="bg-light">
@@ -29,10 +33,10 @@
                     </div>
                 </td>
                 <td *ngIf="i>0">
-                    <div>
-                        <a class="btn btn-secondary" (click)="addQuantity(); selectedQuantity= i">+</a>
+                    <div (click)="selectedQuantity= i" >
+                        <a class="btn btn-secondary" (click)="addQuantity()">+</a>
                         <span class="m-3">{{item.quantity}}</span>
-                        <a class="btn btn-secondary" (click)="removeQuantity(); selectedQuantity= i">-</a>
+                        <a class="btn btn-secondary" (click)="removeQuantity()">-</a>
                     </div>
                     
                 </td>

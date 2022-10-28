@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartServiceService } from '../cart-service.service';
 
 @Component({
@@ -6,23 +6,17 @@ import { CartServiceService } from '../cart-service.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit, OnChanges {
+export class CartComponent implements OnInit {
 
   selectedQuantity:number = 0
-  itemAmount:any
+  itemAmountAdded =1
+  itemAmountRemoved=1
 
   constructor(public carts: CartServiceService) { }
 
   ngOnInit(): void {
     
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-
-  // this.itemAmount = this.carts.myCart[this.selectedQuantity]
-    
-  }
-
   
 
 
@@ -32,11 +26,17 @@ export class CartComponent implements OnInit, OnChanges {
   }
 
   addQuantity(){
-    this.itemAmount.quantity++
+    // this.itemAmount.quantity++
+    // this.selectedQuantity+1
+    // console.log(this.selectedQuantity)
+    this.itemAmountAdded = this.carts.myCart[this.selectedQuantity].quantity++
   }
   
   removeQuantity(){
-    this.itemAmount.quantity--
+    // this.itemAmount.quantity--
+    // this.selectedQuantity-1
+    // console.log(this.selectedQuantity)
+    this.itemAmountRemoved = this.carts.myCart[this.selectedQuantity].quantity--
   }
 
 

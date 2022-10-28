@@ -4,13 +4,13 @@
         <div class="col-2">
             <!-- category -->
                 <div ngbDropdown class="d-inline-block">
-                    <button type="button" class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle>
+                    <button type="button" class="btn btn-outline-dark col-12 " id="dropdownBasic1" ngbDropdownToggle>
                         Product Category
                     </button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <button ngbDropdownItem routerLink="/product-list/apple" >Apple</button>
-                        <button ngbDropdownItem routerLink="/product-list/samsung" >Samsung</button>
-                        <button ngbDropdownItem>Camera</button>
+                        <button class="btn btn-outline-dark" ngbDropdownItem routerLink="/product-list/apple" >Apple</button>
+                        <button class="btn btn-outline-dark" ngbDropdownItem routerLink="/product-list/samsung" >Samsung</button>
+                        <button class="btn btn-outline-dark" ngbDropdownItem>Camera</button>
                         
                         
                     </div>
@@ -37,7 +37,7 @@
                         
                             <div class="card h-100"
                                 style="width:200px; padding: top 5px; ;" type="button">
-                                <img class="card-img" style="width:130px; height: 130px;" [src]='item.imgPath'>
+                                <img class="card-img-top" style="width:130px; height: 130px;" [src]='item.imgPath'>
                                 <div class="card-body">
                                     <h5 class="card-title">{{item.modal}}</h5>
                                     <p class="card-text">
