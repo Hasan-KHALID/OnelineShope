@@ -36,10 +36,6 @@ export class SelectedProductComponent implements OnInit {
     // this.route.navigate(['item'])
 
     addCart(){
-      if(this.cart.myCart.length>1 && this.cart.myCart.filter(this.currentItem.id)){
-        console.log(this.currentItem)
-      }
-
         this.cart.addItem(
         this.currentItem.modal,
         this.currentItem.imgPath, 
