@@ -29,20 +29,15 @@ export class CartComponent implements OnInit {
     // this.itemAmount.quantity++
     // this.selectedQuantity+1
     // console.log(this.selectedQuantity)
-    this.itemAmountAdded = this.carts.myCart[this.selectedQuantity].quantity++
+    this.carts.myCart[this.selectedQuantity].quantity++
+    // console.log(this.carts.myCart[this.selectedQuantity].quantity)
+
   }
   
   removeQuantity(){
-    // this.itemAmount.quantity--
-    // this.selectedQuantity-1
     // console.log(this.selectedQuantity)
-    this.itemAmountRemoved = this.carts.myCart[this.selectedQuantity].quantity--
+    this.carts.myCart[this.selectedQuantity].quantity--
+    // console.log(this.carts.myCart[this.selectedQuantity].quantity)
   }
-
-
-  // removeAmount(){
-  //   this.amount--;
-  //   this.totalAmount =  this.currentItem.price * this.amount;
-  // }
 
 }

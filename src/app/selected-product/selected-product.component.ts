@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CartServiceService } from '../cart-service.service';
@@ -29,13 +30,17 @@ export class SelectedProductComponent implements OnInit {
       this.id =params['id']
     })
     this.currentItem = this.product.products[this.id]
-    
+  
   }
   
     // this.route.navigate(['item'])
 
     addCart(){
-      this.cart.addItem(
+      if(this.cart.myCart.length>1 && this.cart.myCart.filter(this.currentItem.id)){
+        console.log(this.currentItem)
+      }
+
+        this.cart.addItem(
         this.currentItem.modal,
         this.currentItem.imgPath, 
         this.currentItem.Id,
@@ -49,7 +54,6 @@ export class SelectedProductComponent implements OnInit {
         this.currentItem.type,
         this.currentItem.quantity
         );
-
         // this.router.navigate(['/cart'])
 
 

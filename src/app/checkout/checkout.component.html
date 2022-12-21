@@ -18,7 +18,7 @@
         <div class="col-6">
             <div>
 
-                <table class="table align-middle mb-0 bg-white m-3 " *ngIf="carts.myCart.length>1">
+                <table class="table align-middle mb-0 bg-white m-3 " >
                     <thead class="bg-light">
                         <tr>
                             <th>Product</th>
@@ -31,7 +31,7 @@
                     <tbody>
                 
                         <tr *ngFor="let item of carts.myCart; let i=index">
-                            <td *ngIf="i>0">
+                            <td >
                                 <div class="d-flex align-items-center">
                                     <img [src]="item.imgPath" alt="" style="width: 90px; height: 90px" class="rounded-circle" />
                                     <div class="ms-3">
@@ -43,16 +43,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td *ngIf="i>0">
+                            <td >
                                 <div>
                                     <span class="m-3">{{item.quantity}}</span>
                                 </div>
                 
                             </td>
-                            <td *ngIf="i>0">
+                            <td >
                                 <p>{{item.price | currency}}</p>
                             </td>
-                            <td *ngIf="i>0">
+                            <td >
                                 <p>{{item.price*item.quantity | currency }}</p>
                             </td>
                 

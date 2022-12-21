@@ -1,24 +1,30 @@
 import { Injectable } from '@angular/core';
 
+interface MyCart{
+      modal:string,
+      imgPath:string,
+      Id:number,
+      product:string,
+      brand:string,
+      amount:number,
+      price:number,
+      ram:string,
+      color:string,
+      storage:string,
+      type:string,
+      quantity:number
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartServiceService {
 
   addCart:number=0
+  
 
-  myCart =[{modal:'',
-      imgPath:'',
-      Id:0,
-      product:'',
-      brand:'',
-      amount:0,
-      price:0,
-      ram:'',
-      color:'',
-      storage:'',
-      type:'',
-      quantity:1}]
+  myCart : MyCart[]=[]
 
   constructor() { }
 
@@ -35,9 +41,9 @@ export class CartServiceService {
       Storage:string,
       Type:string,
       quantity:number
-    ){
-
-    this.myCart.push(
+    )
+    {
+      this.myCart.push(
       {
       modal:Modal, 
       imgPath:ImgPath, 
@@ -52,8 +58,9 @@ export class CartServiceService {
       type:Type,
       quantity:quantity
     })
-
     this.addCart++
+
+    console.log(this.myCart)
     
 
   }

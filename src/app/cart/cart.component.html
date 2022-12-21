@@ -1,5 +1,5 @@
 <div class="container">
-    <div *ngIf="carts.myCart.length==1" >
+    <div *ngIf="carts.myCart.length==0" >
     <h1 class="text-center m-3">😟</h1>
     <h2 class="text-center m-3">
         No product selected !
@@ -7,7 +7,7 @@
     </div>
     
 
-    <table class="table align-middle mb-0 bg-white m-3 " *ngIf="carts.myCart.length>1">
+    <table class="table align-middle mb-0 bg-white m-3 " *ngIf="carts.myCart.length>0">
         <thead class="bg-light">
             <tr>
                 <th>Product</th>
@@ -20,7 +20,10 @@
         <tbody>
             
             <tr *ngFor="let item of carts.myCart; let i=index" >
-                <td *ngIf="i>0">
+                <td>
+                    {{i}}
+                </td>
+                <td >
                     <div class="d-flex align-items-center">
                         <img [src]="item.imgPath" alt="" style="width: 90px; height: 90px" class="rounded-circle" />
                         <div class="ms-3">
@@ -32,22 +35,22 @@
                         </div>
                     </div>
                 </td>
-                <td *ngIf="i>0">
-                    <div (click)="selectedQuantity= i" >
-                        <a class="btn btn-secondary" (click)="addQuantity()">+</a>
+                <td>
+                    <div  >
+                        <a class="btn btn-secondary" (click)="selectedQuantity=i;addQuantity();">+</a>
                         <span class="m-3">{{item.quantity}}</span>
-                        <a class="btn btn-secondary" (click)="removeQuantity()">-</a>
+                        <a class="btn btn-secondary" (click)="selectedQuantity=i;removeQuantity();">-</a>
                     </div>
                     
                 </td>
-                <td *ngIf="i>0">
+                <td>
                     <p>{{item.price | currency}}</p>
                 </td>
-                <td *ngIf="i>0">
-                    <p>{{item.price*item.quantity | currency }}</p>
+                <td>
+                    <p>{{item.price*item.quantity| currency }}</p>
                 </td>
 
-                <td *ngIf="i>0">
+                <td>
                     <button class="btn btn-danger" (click)="remove()" >remove</button>
                 </td>
             </tr>
@@ -67,3 +70,5 @@
 <h1>{{item[1]}} </h1>
 
 </div> -->
+
+
